@@ -1,0 +1,94 @@
+
+-------------------------------------------------------------------------
+|    ___ _   _ ___                                                      |
+|   / __| | | |_  )   Release 4.1.2  "Cardinal"                         |
+|   \__ \ |_| |/ /                                                      |
+|   |___/\___//___|   Suite (Mesh Deformation Code)                     |
+|                                                                       |
+-------------------------------------------------------------------------
+| SU2 Lead Dev.: Dr. Francisco Palacios, Francisco.D.Palacios@boeing.com|
+|                Dr. Thomas D. Economon, economon@stanford.edu          |
+-------------------------------------------------------------------------
+| SU2 Developers:                                                       |
+| - Prof. Juan J. Alonso's group at Stanford University.                |
+| - Prof. Piero Colonna's group at Delft University of Technology.      |
+| - Prof. Nicolas R. Gauger's group at Kaiserslautern U. of Technology. |
+| - Prof. Alberto Guardone's group at Polytechnic University of Milan.  |
+| - Prof. Rafael Palacios' group at Imperial College London.            |
+-------------------------------------------------------------------------
+| Copyright (C) 2012-2016 SU2, the open-source CFD code.                |
+|                                                                       |
+| SU2 is free software; you can redistribute it and/or                  |
+| modify it under the terms of the GNU Lesser General Public            |
+| License as published by the Free Software Foundation; either          |
+| version 2.1 of the License, or (at your option) any later version.    |
+|                                                                       |
+| SU2 is distributed in the hope that it will be useful,                |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+| Lesser General Public License for more details.                       |
+|                                                                       |
+| You should have received a copy of the GNU Lesser General Public      |
+| License along with SU2. If not, see <http://www.gnu.org/licenses/>.   |
+-------------------------------------------------------------------------
+
+------------------------ Physical Case Definition -----------------------
+Input mesh file name: mesh_NACA0012_inv.su2
+
+---------------------- Grid deformation parameters ----------------------
+Grid deformation using a linear elasticity method.
+Design variables definition (markers <-> value <-> param):
+Airfoil <-> airfoil <-> 0 <-> ( 1, 0.5 )
+
+-------------------------- Output Information ---------------------------
+Output mesh file name: /home/pawan/Hershey_Wing/CFDFiles/mesh_AIRFOIL_serial.su2. 
+No file for visualizing the deformation.
+Cell stiffness scaled by inverse of the cell volume.
+
+------------------- Config File Boundary Information --------------------
+Euler wall boundary marker(s): airfoil.
+Far-field boundary marker(s): farfield.
+
+---------------------- Read Grid File Information -----------------------
+Two dimensional problem.
+5233 points.
+2 surface markers.
+200 boundary elements in index 0 (Marker = airfoil).
+50 boundary elements in index 1 (Marker = farfield).
+10216 triangles.
+
+----------------------- Preprocessing computations ----------------------
+Setting local point connectivity.
+Checking the numerical grid orientation of the interior elements.
+Identify edges and vertices.
+Computing centers of gravity.
+Setting the bound control volume structure.
+
+------------------------- Surface grid deformation ----------------------
+Performing the deformation of the surface grid.
+Enter the name of file with the airfoil information: Enter the format of the airfoil (Selig or Lednicer): Thickness scaling (1.0 means no scaling)?: Close the airfoil (Yes or No)?: Surface mesh orientation (clockwise, or anticlockwise): File info: Airfoil
+
+----------------------- Volumetric grid deformation ---------------------
+Performing the deformation of the volumetric grid.
+
+# FGMRES residual history
+# Residual tolerance target = 4.14044e-11
+# Initial residual norm     = 0.000326429
+     0     1
+     50     0.000176637
+     100     1.94902e-09
+# FGMRES final (true) residual:
+# Iteration = 114: |res|/|res0| = 3.55147e-11.
+
+Non-linear iter.: 1/1. Linear iter.: 114. Min. area: 4.91871e-08. Error: 1.1593e-14.
+
+----------------------- Write deformed grid files -----------------------
+Merging grid connectivity.
+Merging grid coordinates.
+Writing .su2 file.
+Adding any FFD information to the SU2 file.
+
+Completed in 0.570562 seconds on 1 core.
+
+------------------------- Exit Success (SU2_DEF) ------------------------
+
