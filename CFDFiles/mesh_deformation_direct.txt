@@ -41,7 +41,7 @@ Design variables definition (markers <-> value <-> param):
 Airfoil <-> airfoil <-> 0 <-> ( 1, 0.5 )
 
 -------------------------- Output Information ---------------------------
-Output mesh file name: /home/pawan/Hershey_Wing/CFDFiles/mesh_AIRFOIL_serial.su2. 
+Output mesh file name: /home/flowlab/Documents/WingGroup/Hershey_Wing/CFDFiles/mesh_AIRFOIL_serial.su2. 
 No file for visualizing the deformation.
 Cell stiffness scaled by inverse of the cell volume.
 
@@ -73,14 +73,14 @@ Performing the deformation of the volumetric grid.
 
 # FGMRES residual history
 # Residual tolerance target = 4.14044e-11
-# Initial residual norm     = 0.000761637
+# Initial residual norm     = 0.000326429
      0     1
-     50     8.88253e-05
-     100     1.46379e-09
+     50     0.000176637
+     100     1.94902e-09
 # FGMRES final (true) residual:
-# Iteration = 113: |res|/|res0| = 3.52315e-11.
+# Iteration = 114: |res|/|res0| = 3.55147e-11.
 
-Non-linear iter.: 1/1. Linear iter.: 113. Min. area: 4.97997e-08. Error: 2.68336e-14.
+Non-linear iter.: 1/1. Linear iter.: 114. Min. area: 4.91871e-08. Error: 1.1593e-14.
 
 ----------------------- Write deformed grid files -----------------------
 Merging grid connectivity.
@@ -88,7 +88,7 @@ Merging grid coordinates.
 Writing .su2 file.
 Adding any FFD information to the SU2 file.
 
-Completed in 0.454810 seconds on 1 core.
+Completed in 0.498432 seconds on 1 core.
 
 ------------------------- Exit Success (SU2_DEF) ------------------------
 

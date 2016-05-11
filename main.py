@@ -4,12 +4,12 @@ import scipy.optimize as optimize
 
 
 CST = np.asarray([0.25, 0.25, 0.25, 0.25, -0.25, -0.25, -0.25, -0.25])
-airfoil_analysis_options = dict(AnalysisMethod='CFD', AirfoilParameterization='CST', Re=5e5, ComputeGradient=False,
-                                CFDiterations=500, CFDprocessors=2, cfdConfigFile='inv_NACA0012.cfg', ParallelAirfoils=False,
-                                fd_step=1e-6, cs_step=1e-20)
+airfoil_analysis_options = dict(AnalysisMethod='XFOIL', AirfoilParameterization='CST', Re=5e5, ComputeGradient=True,
+                                CFDiterations=500, CFDprocessors=16, cfdConfigFile='inv_NACA0012.cfg', ParallelAirfoils=False,
+                                fd_step=1e-6, cs_step=1e-20, FreeFormDesign=True, BEMSpline='XFOIL', alphas=np.linspace(-15, 15, 30))
 
 ub = [1, 1, 1, 1, 0.2, 0.2, 0.2, 0.2]
-lb = [0.05, 0.05, 0.05, -1, -1, -1, -1, -1]
+lb = [0.205, 0.205, 0.205, 0.205, -1, -1, -1, -1]
 
 af = AirfoilAnalysis(CST, airfoil_analysis_options)
 x_original, y_original = af.getCoordinates()
@@ -25,7 +25,7 @@ for i in range(len(lb)):
 def obj(CST):
     print CST
     af = AirfoilAnalysis(CST, airfoil_analysis_options)
-    cl, cd = af.computeDirect(np.radians(5.0), 5e5)
+    cl, cd, dcl_dalpha, dcd_dalpha, dcl_dRe, dcd_dRe, dcl_dafp, dcd_dafp, lexitflag = af.computeDirect(np.radians(5.0), 5e5)
     print cl, cd
     return -cl/cd
 

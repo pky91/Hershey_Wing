@@ -531,17 +531,17 @@ class AirfoilAnalysis:
                 lexitflag[i+4] = np.logical_or(flag1, flag2)
                 dcl_dafp[i+4] = (cl_fd2 - cl_fd1)/fd_step #(2.*fd_step)
                 dcd_dafp[i+4] = (cd_fd2 - cd_fd1)/fd_step #(2.*fd_step)
-                if lexitflag[i] or lexitflag[i+4] or abs(dcl_dafp[i+4]) > 100.0 or abs(dcd_dafp[i+4]) > 100.0 or abs(dcl_dafp[i]) > 100.0 or abs(dcd_dafp[i]) > 100.0:
-                    cl_cur = self.cl_spline.ev(np.radians(alpha), self.Re)
-                    cd_cur = self.cd_spline.ev(np.radians(alpha), self.Re)
-                    cl_new_fd = self.cl_splines_new[i].ev(np.radians(alpha), self.Re)
-                    cd_new_fd = self.cd_splines_new[i].ev(np.radians(alpha), self.Re)
-                    dcl_dafp[i] = (cl_new_fd - cl_cur) / fd_step
-                    dcd_dafp[i] = (cd_new_fd - cd_cur) / fd_step
-                    cl_new_fd = self.cl_splines_new[i+4].ev(np.radians(alpha), self.Re)
-                    cd_new_fd = self.cd_splines_new[i+4].ev(np.radians(alpha), self.Re)
-                    dcl_dafp[i+4] = (cl_new_fd - cl_cur) / fd_step
-                    dcd_dafp[i+4] = (cd_new_fd - cd_cur) / fd_step
+                # if lexitflag[i] or lexitflag[i+4] or abs(dcl_dafp[i+4]) > 100.0 or abs(dcd_dafp[i+4]) > 100.0 or abs(dcl_dafp[i]) > 100.0 or abs(dcd_dafp[i]) > 100.0:
+                #     cl_cur = self.cl_spline.ev(np.radians(alpha), self.Re)
+                #     cd_cur = self.cd_spline.ev(np.radians(alpha), self.Re)
+                #     cl_new_fd = self.cl_splines_new[i].ev(np.radians(alpha), self.Re)
+                #     cd_new_fd = self.cd_splines_new[i].ev(np.radians(alpha), self.Re)
+                #     dcl_dafp[i] = (cl_new_fd - cl_cur) / fd_step
+                #     dcd_dafp[i] = (cd_new_fd - cd_cur) / fd_step
+                #     cl_new_fd = self.cl_splines_new[i+4].ev(np.radians(alpha), self.Re)
+                #     cd_new_fd = self.cd_splines_new[i+4].ev(np.radians(alpha), self.Re)
+                #     dcl_dafp[i+4] = (cl_new_fd - cl_cur) / fd_step
+                #     dcd_dafp[i+4] = (cd_new_fd - cd_cur) / fd_step
                 #print "derivative CST fail", alpha
         for i in range(8):
             if lexitflag[i]:

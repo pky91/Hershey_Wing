@@ -68,20 +68,20 @@ Free-stream total energy per unit mass (non-dim): 196072
 
 Forces breakdown:
 
-Total CL:       0.944043 | Pressure Component (   99%):    0.944043 | Friction Component (    0%):           0
-Total CD:     0.00327928 | Pressure Component (   99%):  0.00327928 | Friction Component (    0%):           0
-Total CL/CD:     287.881 | Pressure Component (  100%):     287.881 | Friction Component (    0%):           0
-Total CMz:     0.0851542 | Pressure Component (   99%):   0.0851542 | Friction Component (    0%):           0
-Total CFx:    -0.0790119 | Pressure Component (  100%):  -0.0790119 | Friction Component (    0%):           0
-Total CFy:      0.940736 | Pressure Component (   99%):    0.940736 | Friction Component (    0%):           0
+Total CL:       0.577269 | Pressure Component (   99%):    0.577269 | Friction Component (    0%):           0
+Total CD:     0.00169853 | Pressure Component (   99%):  0.00169853 | Friction Component (    0%):           0
+Total CL/CD:     339.864 | Pressure Component (  100%):     339.864 | Friction Component (    0%):           0
+Total CMz:   -0.00481077 | Pressure Component (  100%): -0.00481077 | Friction Component (    0%):           0
+Total CFx:    -0.0486203 | Pressure Component (  100%):  -0.0486203 | Friction Component (    0%):           0
+Total CFy:       0.57522 | Pressure Component (   99%):     0.57522 | Friction Component (    0%):           0
 
 
 Surface name: airfoil
 
-Total CL    (   99%):    0.944043 | Pressure Component (   99%):    0.944043 | Friction Component (    0%):           0
-Total CD    (   99%):  0.00327928 | Pressure Component (   99%):  0.00327928 | Friction Component (    0%):           0
-Total CL/CD (  100%):     287.881 | Pressure Component (  100%):     287.881 | Friction Component (    0%):           0
-Total CMz   (   99%):   0.0851542 | Pressure Component (   99%):   0.0851542 | Friction Component (    0%):           0
-Total CFx   (  100%):  -0.0790119 | Pressure Component (  100%):  -0.0790119 | Friction Component (    0%):           0
-Total CFy   (   99%):    0.940736 | Pressure Component (   99%):    0.940736 | Friction Component (    0%):           0
+Total CL    (   99%):    0.577269 | Pressure Component (   99%):    0.577269 | Friction Component (    0%):           0
+Total CD    (   99%):  0.00169853 | Pressure Component (   99%):  0.00169853 | Friction Component (    0%):           0
+Total CL/CD (  100%):     339.864 | Pressure Component (  100%):     339.864 | Friction Component (    0%):           0
+Total CMz   (  100%): -0.00481077 | Pressure Component (  100%): -0.00481077 | Friction Component (    0%):           0
+Total CFx   (  100%):  -0.0486203 | Pressure Component (  100%):  -0.0486203 | Friction Component (    0%):           0
+Total CFy   (   99%):     0.57522 | Pressure Component (   99%):     0.57522 | Friction Component (    0%):           0
 
