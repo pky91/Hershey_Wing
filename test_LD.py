@@ -9,7 +9,7 @@ CST = np.asarray([-0.25, -0.25, -0.25, -0.25, 0.25, 0.25, 0.25, 0.25])
 
 
 airfoil_analysis_options = dict(AnalysisMethod='CFD', AirfoilParameterization='CST',
-                                CFDiterations=10000, CFDprocessors=16, FreeFormDesign=True, BEMSpline='XFOIL', maxDirectAoA=1000, fd_step=1e-6, cs_step=1e-20,
+                                CFDiterations=10000, CFDprocessors=2, FreeFormDesign=True, BEMSpline='XFOIL', maxDirectAoA=1000, fd_step=1e-6, cs_step=1e-20,
                                 alphas=np.linspace(-15, 15, 30), Re=5e5, ComputeGradient=True, cfdConfigFile='inv_NACA0012.cfg', ParallelAirfoils=True)
 af = AirfoilAnalysis(CST, airfoil_analysis_options)
 x_old, y_old = af.getCoordinates()

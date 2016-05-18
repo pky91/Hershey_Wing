@@ -4,8 +4,8 @@ import scipy.optimize as optimize
 
 
 CST = np.asarray([0.25, 0.25, 0.25, 0.25, -0.25, -0.25, -0.25, -0.25])
-airfoil_analysis_options = dict(AnalysisMethod='XFOIL', AirfoilParameterization='CST', Re=5e5, ComputeGradient=True,
-                                CFDiterations=500, CFDprocessors=16, cfdConfigFile='inv_NACA0012.cfg', ParallelAirfoils=False,
+airfoil_analysis_options = dict(AnalysisMethod='CFD', AirfoilParameterization='CST', Re=5e5, ComputeGradient=True,
+                                CFDiterations=500, CFDprocessors=2, cfdConfigFile='inv_NACA0012.cfg', ParallelAirfoils=False,
                                 fd_step=1e-6, cs_step=1e-20, FreeFormDesign=True, BEMSpline='XFOIL', alphas=np.linspace(-15, 15, 30))
 
 ub = [1, 1, 1, 1, 0.2, 0.2, 0.2, 0.2]
