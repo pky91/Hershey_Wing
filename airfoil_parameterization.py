@@ -616,7 +616,7 @@ class AirfoilAnalysis:
         x_vel = Uinf * cos(alpha)
         y_vel = Uinf * sin(alpha)
         config.FREESTREAM_VELOCITY = '( ' + str(x_vel) + ', ' + str(y_vel) + ', 0.00 )'
-        config.MACH_NUMBER = Ma
+        config.MACH_NUMBER = 0.8
         config.REYNOLDS_NUMBER = airfoil_analysis_options['Re']
 
         if restart:
@@ -870,7 +870,7 @@ class AirfoilAnalysis:
         state.FILES.MESH = config.MESH_FILENAME
         Uinf = 10.0
         Ma = Uinf / 340.29  # Speed of sound at sea level
-        config.MACH_NUMBER = Ma
+        config.MACH_NUMBER = 0.8
         config.REYNOLDS_NUMBER = Re
         config.RESTART_SOL = 'NO'
         config.SOLUTION_FLOW_FILENAME = basepath + os.path.sep + 'solution_flow_AIRFOIL_parallel.dat'
@@ -1028,7 +1028,7 @@ def cfdSolveBladeParallel(self, alphas, Res, afps, airfoil_analysis_options):
         ztate.FILES.MESH = config.MESH_FILENAME
         Uinf = 10.0
         Ma = Uinf / 340.29  # Speed of sound at sea level
-        konfig.MACH_NUMBER = Ma
+        konfig.MACH_NUMBER = 0.8
         konfig.REYNOLDS_NUMBER = Re
 
         if restart:
@@ -1389,7 +1389,7 @@ def cfdDirectSolveParallel(alphas, Re, afp, airfoil_analysis_options):
         state.FILES.MESH = config.MESH_FILENAME
         Uinf = 10.0
         Ma = Uinf / 340.29  # Speed of sound at sea level
-        config.MACH_NUMBER = Ma
+        config.MACH_NUMBER = 0.8
         config.REYNOLDS_NUMBER = Re
 
         if restart:
@@ -1531,7 +1531,7 @@ def cfdAirfoilsSolveParallel(alphas, Res, afps, airfoil_analysis_options):
             ztate.FILES.MESH = config.MESH_FILENAME
             Uinf = 10.0
             Ma = Uinf / 340.29  # Speed of sound at sea level
-            konfig.MACH_NUMBER = Ma
+            konfig.MACH_NUMBER = 0.8
             konfig.REYNOLDS_NUMBER = Re
 
             if restart:
@@ -1870,7 +1870,7 @@ def cfdDirectSolveParallel(alphas, Re, afp, airfoil_analysis_options):
         state.FILES.MESH = config.MESH_FILENAME
         Uinf = 10.0
         Ma = Uinf / 340.29  # Speed of sound at sea level
-        config.MACH_NUMBER = Ma
+        config.MACH_NUMBER = 0.8
         config.REYNOLDS_NUMBER = Re
 
         if restart:
