@@ -3,6 +3,7 @@ import numpy as np
 import scipy.optimize as optimize
 
 
+
 CST = np.asarray([-0.25, -0.25, -0.25, -0.25, 0.25, 0.25, 0.25, 0.25])
 airfoil_analysis_options = dict(AnalysisMethod='CFD', AirfoilParameterization='CST', Re=5e5, ComputeGradient=False,
                                 CFDiterations=5000, CFDprocessors=16, cfdConfigFile='inv_NACA0012.cfg', ParallelAirfoils=False,
